@@ -1,7 +1,7 @@
 "use client";
 
-import useConversation from "@/app/api/hook/useConversation";
-import useRoutes from "@/app/api/hook/useRoutes";
+import useConversation from "@/app/hook/useConversation";
+import useRoutes from "@/app/hook/useRoutes";
 import React from "react";
 import MobileItem from "./MobileItem";
 
