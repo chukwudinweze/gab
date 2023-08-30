@@ -16,8 +16,6 @@ const DesktopSidebar: React.FC<DesktopSidebaeProps> = ({ currentUser }) => {
 
   const [isOpen, setIsOpen] = useState(false);
 
-  console.log({ currentUser });
-
   return (
     <>
       <SettingsModal
