@@ -11,5 +11,9 @@ export const pusherServer = new PusherServer({
 
 export const pusherClient = new PusherClient("0e9f7a441100a8636563", {
   cluster: "mt1",
+  channelAuthorization: {
+    endpoint: "/api/pusher/auth",
+    transport: "ajax",
+  },
   forceTLS: true,
 });

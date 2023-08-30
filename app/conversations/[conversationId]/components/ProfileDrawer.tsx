@@ -14,6 +14,7 @@ import useOtherUser from "@/app/hook/useOtherser";
 import Modal from "@/app/components/Modal";
 import ConfirmModal from "@/app/components/ConfirmModal";
 import AvatarGroup from "@/app/components/AvatarGroup";
+import useActiveList from "@/app/hook/useActiveList";
 // import AvatarGroup from "@/app/components/AvatarGroup";
 // import ConfirmModal from "./ConfirmModal";
 
@@ -41,16 +42,16 @@ const ProfileDrawer: React.FC<ProfileDrawerProps> = ({
     return data.name || otherUser.name;
   }, [data.name, otherUser.name]);
 
-  // const { members } = useActiveList();
-  // const isActive = members.indexOf(otherUser?.email!) !== -1;
+  const { members } = useActiveList();
+  const isActive = members.indexOf(otherUser?.email!) !== -1;
 
   const statusText = useMemo(() => {
     if (data.isGroup) {
       return `${data.users.length} members`;
     }
 
-    return "Active";
-  }, [data]);
+    return isActive ? "Active" : "Offline";
+  }, [data, isActive]);
 
   return (
     <>

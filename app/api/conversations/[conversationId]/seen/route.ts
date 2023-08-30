@@ -65,6 +65,12 @@ export async function POST(request: Request, { params }: { params: IParams }) {
       return NextResponse.json(conversation);
     }
 
+    await pusherServer.trigger(
+      conversationId!,
+      "message:update",
+      updatedMessage
+    );
+
     return NextResponse.json(updatedMessage);
   } catch (error: any) {
     console.log("ERROR_MESSAGES SEEN", error);
