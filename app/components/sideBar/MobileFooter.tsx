@@ -9,7 +9,7 @@ const MobileFooter = () => {
   const routes = useRoutes();
   const { isOpen } = useConversation();
 
-  if (!isOpen) {
+  if (isOpen) {
     return null;
   }
   return (

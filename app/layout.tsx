@@ -5,6 +5,7 @@ import ToasterContext from "./context/ToasterContext";
 import "./globals.css";
 import AuthContext from "./context/authContext";
 import ActiveStatus from "./components/ActiveStatus";
+import MobileFooter from "./components/sideBar/MobileFooter";
 
 const inter = Inter({ subsets: ["latin"] });
 
