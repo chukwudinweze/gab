@@ -72,9 +72,9 @@ const AuthForm = () => {
     }
   };
 
-  const socialActions = (action: string) => {
+  const socialActions = async (action: string) => {
     setIsLoading(true);
-    signIn(action, {
+    await signIn(action, {
       redirect: false,
     })
       .then((callback) => {
