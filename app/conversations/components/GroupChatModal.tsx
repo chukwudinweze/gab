@@ -1,6 +1,5 @@
 "use client";
 
-import getConversations from "@/app/actions/getConversations";
 import Button from "@/app/components/Button";
 import Modal from "@/app/components/Modal";
 import Input from "@/app/components/input/Input";
